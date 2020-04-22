@@ -1,52 +1,51 @@
 openapi: '3.0.2'
 info:
-  title: Books Service 
-  description: This service allows for control of the system's books
+  title: Project Service 
+  description: This service allows for control of the system's projects
   version: '1.0'
   contact:
     name: Jose Francisco Mateo Carrasco
     email: locutermo@gmail.com
 servers:
-  - url: https://books-service-sisgebi.herokuapp.com/  
+  - url: http://api.projects.sigepro.com
 
 tags:
-  - name: Book
-    description: Everything about book
+  - name: Project
+    description: Everything about project
         
 paths:
   #Modulo de libros  
-  /books:
+  /projects:
     get:
       tags:
-        - Book      
-      summary: Find all books
+        - Project      
+      summary: Find all projects
             
       operationId: index
       responses:      
         '200':
-          $ref: components/responses/responses.yml#/ShowBooks          
+          $ref: components/responses/responses.yml#/ShowProjects          
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
           $ref: components/responses/responses.yml#/MethodNotAllowed           
         '401':
-          $ref: components/responses/responses.yml#/Unauthenticated 
-          
+          $ref: components/responses/responses.yml#/Unauthenticated                     
           
     post:
       tags:
-        - Book    
-      summary: Add a new book to the system
+        - Project    
+      summary: Add a new project to the system
       operationId: store
       requestBody:
-        description: book to add to the system
+        description: project to add to the system
         content:
           application/json:
             schema:
-              $ref: components/schemas/payloads/payload.yml#/BookPayload
+              $ref: components/schemas/payloads/payload.yml#/ProjectPayload
       responses:      
         '201':
-          $ref: components/responses/responses.yml#/Created          
+          $ref: components/responses/responses.yml#/ProjectCreated          
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -54,17 +53,17 @@ paths:
         '401':
           $ref: components/responses/responses.yml#/Unauthenticated 
 
-  /books/{id}:
+  /projects/{id}:
     get:
       tags:
-        - Book
-      summary: Find a book
+        - Project
+      summary: Find a project
       operationId: show
       parameters:
         - $ref: components/parameters/parameters.yml#/id
       responses:
         '200':
-          $ref: components/responses/responses.yml#/ShowBook       
+          $ref: components/responses/responses.yml#/ShowProject       
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -73,20 +72,20 @@ paths:
           $ref: components/responses/responses.yml#/Unauthenticated 
     put: 
       tags:
-        - Book
-      summary: Update Book
+        - Project
+      summary: Update Project
       operationId: update
       parameters: 
         - $ref: components/parameters/parameters.yml#/id
       requestBody:
-        description: book to update to the system
+        description: project to update to the system
         content:
           x-www-form-urlencoded:
             schema:
-              $ref: components/schemas/payloads/payload.yml#/BookPayload
+              $ref: components/schemas/payloads/payload.yml#/ProjectPayload
       responses:
         '201':
-          $ref: components/responses/responses.yml#/Created      
+          $ref: components/responses/responses.yml#/ProjectCreated      
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
@@ -98,14 +97,14 @@ paths:
 
     delete:
       tags:
-        - Book
-      summary: Delete Book
+        - Project
+      summary: Delete Project
       operationId: destroy
       parameters:
         - $ref: components/parameters/parameters.yml#/id
       responses:
         '200':
-          $ref: components/responses/responses.yml#/DeleteBook       
+          $ref: components/responses/responses.yml#/DeleteProject       
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':

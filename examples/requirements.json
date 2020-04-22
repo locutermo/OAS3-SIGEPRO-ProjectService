@@ -1,0 +1,473 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "function": "Praesentium dolor hic ex.",
+            "category": "RNF",
+            "project_id": 6,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 2,
+            "function": "Illum neque fuga cupiditate et.",
+            "category": "RF",
+            "project_id": 9,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 3,
+            "function": "Rerum quaerat praesentium ipsam.",
+            "category": "RNF",
+            "project_id": 1,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 4,
+            "function": "Rerum eos illum vel.",
+            "category": "RF",
+            "project_id": 10,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 5,
+            "function": "Dolore commodi temporibus nihil.",
+            "category": "RNF",
+            "project_id": 10,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 6,
+            "function": "Tempora dolor aliquam recusandae.",
+            "category": "RF",
+            "project_id": 6,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 7,
+            "function": "Et quos atque.",
+            "category": "RF",
+            "project_id": 7,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 8,
+            "function": "Voluptatibus molestias totam sequi.",
+            "category": "RNF",
+            "project_id": 3,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 9,
+            "function": "Quidem velit modi facilis commodi.",
+            "category": "RF",
+            "project_id": 9,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 10,
+            "function": "In explicabo ad in.",
+            "category": "RF",
+            "project_id": 4,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 11,
+            "function": "Debitis nulla labore recusandae.",
+            "category": "RF",
+            "project_id": 3,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 12,
+            "function": "Autem quidem laudantium tenetur.",
+            "category": "RF",
+            "project_id": 9,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 13,
+            "function": "Voluptatibus ipsum nostrum aperiam et dolorem.",
+            "category": "RNF",
+            "project_id": 9,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 14,
+            "function": "Officia sint similique.",
+            "category": "RNF",
+            "project_id": 5,
+            "cus_id": 1,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 15,
+            "function": "Expedita ipsum est eum nihil officia.",
+            "category": "RNF",
+            "project_id": 5,
+            "cus_id": 1,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 16,
+            "function": "Ut perferendis fugiat dolore nulla.",
+            "category": "RF",
+            "project_id": 1,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 17,
+            "function": "Sit necessitatibus non.",
+            "category": "RNF",
+            "project_id": 7,
+            "cus_id": 1,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 18,
+            "function": "Recusandae ab labore minus.",
+            "category": "RF",
+            "project_id": 1,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 19,
+            "function": "Cum necessitatibus sequi laudantium distinctio.",
+            "category": "RNF",
+            "project_id": 6,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 20,
+            "function": "Ratione et est quisquam.",
+            "category": "RNF",
+            "project_id": 2,
+            "cus_id": 1,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 21,
+            "function": "Expedita commodi porro voluptas.",
+            "category": "RF",
+            "project_id": 1,
+            "cus_id": 3,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 22,
+            "function": "Recusandae voluptate molestias.",
+            "category": "RF",
+            "project_id": 8,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 23,
+            "function": "Facere atque pariatur exercitationem.",
+            "category": "RF",
+            "project_id": 8,
+            "cus_id": 1,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 24,
+            "function": "Animi in et ut.",
+            "category": "RF",
+            "project_id": 2,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 25,
+            "function": "Omnis cum ut sapiente ducimus.",
+            "category": "RF",
+            "project_id": 8,
+            "cus_id": 1,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 26,
+            "function": "Alias illo laudantium sint provident.",
+            "category": "RNF",
+            "project_id": 1,
+            "cus_id": 1,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 27,
+            "function": "Dicta aut ducimus incidunt molestiae.",
+            "category": "RF",
+            "project_id": 7,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 28,
+            "function": "Excepturi perspiciatis rerum non explicabo minima.",
+            "category": "RF",
+            "project_id": 8,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 29,
+            "function": "Rerum et inventore perferendis quo.",
+            "category": "RNF",
+            "project_id": 6,
+            "cus_id": 3,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 30,
+            "function": "Blanditiis sit molestiae.",
+            "category": "RF",
+            "project_id": 9,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 31,
+            "function": "Fugit harum aut cum.",
+            "category": "RF",
+            "project_id": 2,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 32,
+            "function": "Voluptatum consequuntur eos nam fugit.",
+            "category": "RF",
+            "project_id": 4,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 33,
+            "function": "Magni enim qui et et.",
+            "category": "RNF",
+            "project_id": 7,
+            "cus_id": 3,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 34,
+            "function": "Ea quia ab.",
+            "category": "RF",
+            "project_id": 7,
+            "cus_id": 1,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 35,
+            "function": "Fugiat voluptas libero est itaque.",
+            "category": "RF",
+            "project_id": 10,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 36,
+            "function": "Officia quaerat odio numquam dolorum praesentium.",
+            "category": "RF",
+            "project_id": 3,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 37,
+            "function": "Odit non earum aut.",
+            "category": "RF",
+            "project_id": 2,
+            "cus_id": 3,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 38,
+            "function": "Dolore doloremque labore est magni aut.",
+            "category": "RF",
+            "project_id": 4,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 39,
+            "function": "Officiis dignissimos modi sed.",
+            "category": "RF",
+            "project_id": 8,
+            "cus_id": 1,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 40,
+            "function": "Qui voluptas eos voluptas voluptatum.",
+            "category": "RF",
+            "project_id": 2,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 41,
+            "function": "Sed id iusto molestias.",
+            "category": "RF",
+            "project_id": 9,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 42,
+            "function": "Voluptatibus voluptas ut in.",
+            "category": "RF",
+            "project_id": 4,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 43,
+            "function": "Dolores quia vero culpa eum.",
+            "category": "RNF",
+            "project_id": 8,
+            "cus_id": 1,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 44,
+            "function": "Sed qui laborum et asperiores sunt.",
+            "category": "RNF",
+            "project_id": 4,
+            "cus_id": 3,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 45,
+            "function": "Facilis quaerat et facilis eaque.",
+            "category": "RNF",
+            "project_id": 3,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 46,
+            "function": "Modi numquam eligendi nulla qui.",
+            "category": "RNF",
+            "project_id": 8,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 47,
+            "function": "Sit ut assumenda nihil a in.",
+            "category": "RF",
+            "project_id": 3,
+            "cus_id": 3,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 48,
+            "function": "Et impedit voluptas consequatur.",
+            "category": "RNF",
+            "project_id": 3,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 49,
+            "function": "Voluptatem distinctio beatae incidunt architecto provident.",
+            "category": "RNF",
+            "project_id": 8,
+            "cus_id": 4,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 50,
+            "function": "Quibusdam provident neque inventore.",
+            "category": "RF",
+            "project_id": 7,
+            "cus_id": 2,
+            "created_at": "2020-04-21 22:59:40",
+            "updated_at": "2020-04-21 22:59:40"
+        },
+        {
+            "id": 51,
+            "function": "El sistema deberá permitir al Administrador registrar proyectos",
+            "category": "RF",
+            "project_id": 1,
+            "cus_id": null,
+            "created_at": "2020-04-21 22:59:44",
+            "updated_at": "2020-04-21 22:59:44"
+        },
+        {
+            "id": 52,
+            "function": "El sistema debera permitir al administrador registrar un autor",
+            "category": "RF",
+            "project_id": 1,
+            "cus_id": null,
+            "created_at": "2020-04-22 00:52:03",
+            "updated_at": "2020-04-22 00:52:16"
+        }
+    ],
+    "code": 200
+}

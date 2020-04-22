@@ -12,40 +12,93 @@
         code: 
           type: integer
 
+   
+    ## Project Module 
     # CreatedResponse: Esquema de la respuesta de exito CreatedResponse el cual contiene un ejemplo
-    CreatedResponse:
+    ProjectCreatedResponse:
       type: object
       required:
         - data
         - code
       properties:
         data:           
-          $ref: ../models/models.yml#/Book
+          $ref: ../models/models.yml#/Project
         code: 
           type: integer   
           example: 201  
-          
-    ShowBookResponse:
+
+    ShowProjectResponse:
       type: object
       required:
         - data
         - code
       properties: 
         data:
-          $ref: ../models/models.yml#/Book
+          $ref: ../models/models.yml#/Project
         code:
           type: integer
           example: 200
 
-    ShowBooksResponse:
+    ShowProjectsResponse:
       type: object
       required:
         - data
         - code
       properties: 
         data:
-          $ref: ../models/models.yml#ArrayOfBooks
+          $ref: ../models/models.yml#Project
         code:
           type: integer
           example: 200
 
+    ## Requirement
+
+    RequirementCreatedResponse:
+      type: object
+      required:
+        - data
+        - code
+      properties:
+        data:           
+          $ref: ../models/models.yml#/Requirement
+        code: 
+          type: integer   
+          example: 201  
+    
+    ShowRequirementResponse:
+      type: object
+      required:
+        - data
+        - code
+      properties: 
+        data:
+          $ref: ../models/models.yml#/Requirement
+        code:
+          type: integer
+          example: 200
+
+    ## Uses of case
+
+    UseCaseCreatedResponse:
+      type: object
+      required:
+        - data
+        - code
+      properties:
+        data:           
+          $ref: ../models/models.yml#/UseCase
+        code: 
+          type: integer   
+          example: 201  
+  
+    ShowUseCaseResponse:
+        type: object
+        required:
+          - data
+          - code
+        properties: 
+          data:
+            $ref: ../models/models.yml#/UseCase
+          code:
+            type: integer
+            example: 200

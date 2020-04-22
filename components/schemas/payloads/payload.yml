@@ -1,43 +1,55 @@
 #PAYLOAD SCHEME
   #Este esquema contiene la estructura de un request body
-    BookPayload:
+    ProjectPayload:
       type: object
       properties:        
-        title:
-          type: string            
-        seconday_title: 
-          type: string                    
-        edition: 
-          type: integer          
-        summary: 
+        name:
           type: string
-        isbn: 
+        abbreviation: 
+          type: string          
+        repository: 
+          type: string  
+        responsible_name: 
           type: string
-        extension: 
-          type: string
-        observations: 
-          type: string 
-        dimensions: 
-          type: string
-        accompaniment: 
-          type: string
-        keywords:
-          type: string 
-        publication_date: 
-          type: string
-        tome: 
-          type: integer                       
+        cost: 
+          type: integer
+        hours_duration: 
+          type: integer                     
       example:           
-          title: Jessie James Meets Frankenstein's Daughter
-          secondary_title: Soloist
-          edition: 1
-          summary: Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris."
-          isbn: 008384517-8
-          extension: 52584-045
-          observations: Sed ante. Vivamus tortor.
-          dimensions: 16
-          accompaniment: in hac
-          keywords: lobortis,convallis,tortor,risus
-          publication_date: 9/26/2019
-          tome: 1
+        name: Sistema de Gestión de Proyectos
+        abbreviation: SIGEPRO
+        repository: locutermo/SIGEPRO
+        responsible_name: Jose Mateo Carrasco
+        cost: null
+        hours_duration: null
       
+    RequirementPayload:
+      type: object
+      properties:
+        project_id : 
+          type: integer
+        cus_id:
+          type: integer
+        function: 
+          type: text
+        category: 
+          type: string
+      example:
+        project_id: 1
+        function: "El sistema deberá permitir al Administrador registrar un estudiante"
+        cus_id: 1
+        category: "RF"
+
+    UseCasePayload:
+      type: object
+      properties:
+        number: 
+          type: integer
+        description: 
+          type: text
+        project_id : 
+          type: integer
+      example:
+        number: 1
+        description: "Gestionar los estudiantes"
+        project_id : 1

@@ -2,7 +2,7 @@
   # Contiene todos los tipos de respuestas específicas de una petición http
   # Por ejemplo dentro de las operaciones basicas de un CRUD para una petición de tipo post para registrar un recurso
   # tenemos respuestas de errores específicas indicando su código y la respuesta de exito correspondiente al registro
-  # el cual es CreatedBook -> Esta respuesta tiene como contenido un scheme de tipo CreatedResponse, el cual contiene 
+  # el cual es CreatedProject -> Esta respuesta tiene como contenido un scheme de tipo CreatedResponse, el cual contiene 
   # la estructura de la respuesta luego de que se realiza un registro  
     ## Respuestas de error específicas 
   
@@ -36,33 +36,98 @@
 
   
     ## Respuestas de exito específicas
-    Created:
+
+    ### Projects
+
+    ProjectCreated:
       description: The resource has been successfully created
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/CreatedResponse                        
+            $ref: ../schemas/responses/successful.yml#/ProjectCreatedResponse                        
     
-    ShowBooks: 
-      description: Show all books
+    ShowProjects: 
+      description: Show all projects
       content:
         application/json:
           schema:
             $ref: ../schemas/responses/successful.yml#/SuccessfulResponse                                                    
           example: 
-            $ref: ../../examples/books.json
+            $ref: ../../examples/projects.json
     
-    ShowBook:
-      description: Show one book 
+    ShowProject:
+      description: Show one project 
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/ShowBookResponse                                                                
+            $ref: ../schemas/responses/successful.yml#/ShowProjectResponse                                                                    
 
-    DeleteBook:
-      description: Delete one book 
+    DeleteProject:
+      description: Delete one project 
       content: 
         application/json:
           schema:
-            $ref: ../schemas/responses/successful.yml#/ShowBookResponse                                                                            
+            $ref: ../schemas/responses/successful.yml#/ShowProjectResponse                                                                            
     
+    ## Requirements: 
+
+    RequirementCreated:
+      description: The resource has been successfully created
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/RequirementCreatedResponse                        
+
+    ShowRequirements:
+      description: Show requirements 
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/SuccessfulResponse                                                    
+          example: 
+            $ref: ../../examples/requirements.json      
+    
+    ShowRequiremt:
+      description: Show one requirement 
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowRequirementResponse                                                                    
+
+    DeleteRequirement:
+      description: Delete one requirement 
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowRequirementResponse                                                                            
+
+    ## Cases of use
+    UseCaseCreated:
+      description: The resource has been successfully created
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/UseCaseCreatedResponse                        
+
+    ShowUsesCase:
+      description: Show Cases of use  
+      content: 
+        application/json:
+          schema: 
+            $ref: ../schemas/responses/successful.yml#/SuccessfulResponse                                                    
+          example: 
+            $ref: ../../examples/cus.json
+
+    ShowUseCase:
+      description: Show one case of use 
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowUseCaseResponse                                                                    
+
+    DeleteUseCase:
+      description: Delete one case of use  
+      content: 
+        application/json:
+          schema:
+            $ref: ../schemas/responses/successful.yml#/ShowUseCaseResponse                                                                            
