@@ -1,0 +1,134 @@
+openapi: '3.0.2'
+info:
+  title: Books Service 
+  description: This service allows for control of the system's books
+  version: '1.0'
+  contact:
+    name: Jose Francisco Mateo Carrasco
+    email: locutermo@gmail.com
+servers:
+  - url: https://books-service-sisgebi.herokuapp.com/  
+
+tags:
+  - name: Book
+    description: Everything about book
+        
+paths:
+  #Modulo de libros  
+  /books:
+    get:
+      tags:
+        - Book      
+      summary: Find all books
+            
+      operationId: index
+      responses:      
+        '200':
+          $ref: components/responses/responses.yml#/ShowBooks          
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+          
+          
+    post:
+      tags:
+        - Book    
+      summary: Add a new book to the system
+      operationId: store
+      requestBody:
+        description: book to add to the system
+        content:
+          application/json:
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/BookPayload
+      responses:      
+        '201':
+          $ref: components/responses/responses.yml#/Created          
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+
+  /books/{id}:
+    get:
+      tags:
+        - Book
+      summary: Find a book
+      operationId: show
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowBook       
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+    put: 
+      tags:
+        - Book
+      summary: Update Book
+      operationId: update
+      parameters: 
+        - $ref: components/parameters/parameters.yml#/id
+      requestBody:
+        description: book to update to the system
+        content:
+          x-www-form-urlencoded:
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/BookPayload
+      responses:
+        '201':
+          $ref: components/responses/responses.yml#/Created      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+        '422':
+          $ref: components/responses/responses.yml#/UnprocessableEntity           
+
+    delete:
+      tags:
+        - Book
+      summary: Delete Book
+      operationId: destroy
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/DeleteBook       
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+
+
+# Aplicar la API key globalmente a todas las operaciones 
+security:
+  - Authorization: []
+            
+
+components:
+      
+  # SECURITY
+  # Contiene todos los tipos de seguridad para el uso del servicio  
+  securitySchemes:
+    # AUTHORIZATION:
+    # Permite el uso del servicio mediante el registro de una api key enviado en el header
+    # con el nombre Authorization, por ejemplo: Authorization EJm9IExSA9rv3N9uCVfIhNRdNOMUSe8w
+    # estas cadenas serán colocadas en el archivo de configuración del servicio y restringido mediante un middleware
+    Authorization:
+      type: apiKey
+      name: Authorization
+      in: header 
