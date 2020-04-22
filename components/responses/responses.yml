@@ -87,7 +87,7 @@
           example: 
             $ref: ../../examples/requirements.json      
     
-    ShowRequiremt:
+    ShowRequirement:
       description: Show one requirement 
       content: 
         application/json:

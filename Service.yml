@@ -12,6 +12,10 @@ servers:
 tags:
   - name: Project
     description: Everything about project
+  - name: Requirement
+    description: Everything about requirement
+  - name: UseCase
+    description: Everything about case of use
         
 paths:
   #Modulo de libros  
@@ -31,7 +35,7 @@ paths:
           $ref: components/responses/responses.yml#/MethodNotAllowed           
         '401':
           $ref: components/responses/responses.yml#/Unauthenticated                     
-          
+
     post:
       tags:
         - Project    
@@ -105,6 +109,273 @@ paths:
       responses:
         '200':
           $ref: components/responses/responses.yml#/DeleteProject       
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+
+  /projects/{id}/requirements:
+    get:
+      tags:
+        - Project
+      summary: It gets the requirements of a project
+      operationId: showRequirements
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowRequirements       
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+
+  /projects/{id}/cus:
+    get:
+      tags:
+        - Project
+      summary: It gets the cases of use of a project
+      operationId: showUseCases
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowUsesCase       
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+  ## Modulo de Requerimientos     
+  /requirements:
+    get:
+      tags:
+        - Requirement      
+      summary: Find all requirements
+            
+      operationId: index
+      responses:      
+        '200':
+          $ref: components/responses/responses.yml#/ShowRequirements          
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated                     
+
+    post:
+      tags:
+        - Requirement    
+      summary: Add a new requirement to the system
+      operationId: store
+      requestBody:
+        description: requirement to add to the system
+        content:
+          application/json:
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/RequirementPayload
+      responses:      
+        '201':
+          $ref: components/responses/responses.yml#/RequirementCreated          
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+
+  /requirements/{id}:
+    get:
+      tags:
+        - Requirement
+      summary: Find a requirement
+      operationId: show
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowRequirement       
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+    put: 
+      tags:
+        - Requirement
+      summary: Update Requirement
+      operationId: update
+      parameters: 
+        - $ref: components/parameters/parameters.yml#/id
+      requestBody:
+        description: requirement to update to the system
+        content:
+          x-www-form-urlencoded:
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/RequirementPayload
+      responses:
+        '201':
+          $ref: components/responses/responses.yml#/RequirementCreated      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+        '422':
+          $ref: components/responses/responses.yml#/UnprocessableEntity           
+
+    delete:
+      tags:
+        - Requirement
+      summary: Delete Requirement
+      operationId: destroy
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/DeleteRequirement       
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+  
+  /requirements/{id}/project:
+    get:
+      tags:
+        - Requirement
+      summary: It gets the project of a requirement
+      operationId: showProject
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowProject       
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+
+  ## Modulo de Casos de uso     
+  /cus:
+    get:
+      tags:
+        - UseCase      
+      summary: Find all cases of use
+            
+      operationId: index
+      responses:      
+        '200':
+          $ref: components/responses/responses.yml#/ShowUsesCase          
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated                     
+
+    post:
+      tags:
+        - UseCase    
+      summary: Add a new case of use to the system
+      operationId: store
+      requestBody:
+        description: requirement to add to the system
+        content:
+          application/json:
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/UseCasePayload
+      responses:      
+        '201':
+          $ref: components/responses/responses.yml#/UseCaseCreated          
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+
+  /cus/{id}:
+    get:
+      tags:
+        - UseCase
+      summary: Find a case of use
+      operationId: show
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowUseCase       
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+    put: 
+      tags:
+        - UseCase
+      summary: Update Case of use 
+      operationId: update
+      parameters: 
+        - $ref: components/parameters/parameters.yml#/id
+      requestBody:
+        description: case of use to update to the system
+        content:
+          x-www-form-urlencoded:
+            schema:
+              $ref: components/schemas/payloads/payload.yml#/UseCasePayload
+      responses:
+        '201':
+          $ref: components/responses/responses.yml#/UseCaseCreated      
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+        '422':
+          $ref: components/responses/responses.yml#/UnprocessableEntity           
+
+    delete:
+      tags:
+        - UseCase
+      summary: Delete  Case of use
+      operationId: destroy
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/DeleteUseCase       
+        '404':          
+          $ref: components/responses/responses.yml#/NotFound 
+        '405':
+          $ref: components/responses/responses.yml#/MethodNotAllowed           
+        '401':
+          $ref: components/responses/responses.yml#/Unauthenticated 
+  
+  /cus/{id}/project:
+    get:
+      tags:
+        - UseCase
+      summary: It gets the case of use of a project
+      operationId: showProject
+      parameters:
+        - $ref: components/parameters/parameters.yml#/id
+      responses:
+        '200':
+          $ref: components/responses/responses.yml#/ShowProject       
         '404':          
           $ref: components/responses/responses.yml#/NotFound 
         '405':
